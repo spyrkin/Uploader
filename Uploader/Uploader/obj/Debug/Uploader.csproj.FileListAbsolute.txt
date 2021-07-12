@@ -1,0 +1,14 @@
+C:\Users\Programmist\Desktop\Uploader\Uploader\Uploader\bin\Debug\Uploader.exe.config
+C:\Users\Programmist\Desktop\Uploader\Uploader\Uploader\bin\Debug\Uploader.exe
+C:\Users\Programmist\Desktop\Uploader\Uploader\Uploader\bin\Debug\Uploader.pdb
+C:\Users\Programmist\Desktop\Uploader\Uploader\Uploader\obj\Debug\Uploader.exe
+C:\Users\Programmist\Desktop\Uploader\Uploader\Uploader\obj\Debug\Uploader.pdb
+C:\Users\Programmist\Desktop\Uploader\Uploader\Uploader\obj\Debug\Uploader.csproj.CoreCompileInputs.cache
+C:\Users\Programmist\Desktop\Uploader\Uploader\Uploader\obj\Debug\Uploader.csprojAssemblyReference.cache
+C:\Users\Pavel\Downloads\Uploader\Uploader\Uploader\bin\Debug\Uploader.exe.config
+C:\Users\Pavel\Downloads\Uploader\Uploader\Uploader\bin\Debug\Uploader.exe
+C:\Users\Pavel\Downloads\Uploader\Uploader\Uploader\bin\Debug\Uploader.pdb
+C:\Users\Pavel\Downloads\Uploader\Uploader\Uploader\obj\Debug\Uploader.csprojAssemblyReference.cache
+C:\Users\Pavel\Downloads\Uploader\Uploader\Uploader\obj\Debug\Uploader.csproj.CoreCompileInputs.cache
+C:\Users\Pavel\Downloads\Uploader\Uploader\Uploader\obj\Debug\Uploader.exe
+C:\Users\Pavel\Downloads\Uploader\Uploader\Uploader\obj\Debug\Uploader.pdb
