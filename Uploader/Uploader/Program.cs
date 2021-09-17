@@ -12,6 +12,8 @@ namespace Uploader
         [STAThread]
         static void Main(string[] args)
         {
+            var test = new Test();
+            test.exec();
             Console.WriteLine("Ваша лодка готова, капитан!");
             Worker wk = new Worker();
             if (wk.Action == 0)
@@ -25,5 +27,7 @@ namespace Uploader
             }
 
         }
+
+       
     }
 }

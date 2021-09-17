@@ -522,6 +522,12 @@ namespace Uploader
                     Console.WriteLine("Delete : " + fi.Name);
                     fi.Delete();
                 }
+
+                if (fi.Name=="notify.html")
+                {
+                    Console.WriteLine("Delete : " + fi.Name);
+                    fi.Delete();
+                }
                 if (fi.Extension == ".auto")
                 {
                     Console.WriteLine("Delete : " + fi.Name);
