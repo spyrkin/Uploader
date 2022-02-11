@@ -299,20 +299,54 @@ namespace Uploader
         {
             infowork();
             clearFolder();
-            setVersion();
-            if (project.build)
+            if (!project.isMyBuild)
             {
-
+                setVersion();
                 build();
 
                 Thread.Sleep(60 * 1000);
                 commit();
             }
+            else
+            {
+               getVersion();
+               Console.WriteLine("use you version: "+newVersion);
+            }
+
+
             int i = 0;
             recursiveWork(0);
 
             Console.WriteLine("Press any Key to Continue");
             Console.ReadKey();
+
+        }
+
+
+        //получаем текущую версию
+        private void getVersion()
+        {
+
+            Utils utils = new Utils();
+            string assemlyContent = "";
+            assemlyContent = utils.getFileContent(project.assemlypath);
+            int st_index = assemlyContent.IndexOf("AssemblyVersion");
+            int l1 = "AssemblyVersion(".Length;
+            int st1 = st_index + l1;                                                           //индекс откуда начинается строка версия
+            int st2 = 0;                                                                       //индекс где кончается строка версия
+
+            for (int i = st1; i < assemlyContent.Length - 1; i++)
+            {
+                if (assemlyContent[i] == ')')
+                {
+                    st2 = i;
+                    break;
+                }
+            }
+            currentVersion = assemlyContent.Substring(st1, st2 - st1);                         //получаем старую версию
+            newVersion = project.getNewVerstion(currentVersion, false); //получаем новую версию
+            bserVersion = modifyVersion(); //получаем представление версии в формала 1.2.3.4                                  
+
 
         }
 

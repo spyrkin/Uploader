@@ -20,6 +20,7 @@ namespace Uploader
             ftpurl = "ftp://update.instatsport.com/hokreg/";
             httpurl = "http://update.instatsport.com/hokreg/";
             buildCommand = getbuildcommabd(VSversion.VS2017);
+            isMyBuild = true;
 
         }
 

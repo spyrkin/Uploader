@@ -24,6 +24,8 @@ namespace Uploader
         public abstract string getNewVerstion(string ver, bool add);      //получение новой версии
         public abstract string getZipName();                    //получение имени для архива
 
+        public bool isMyBuild = false;
+
         public string getbuildcommabd(VSversion vs)
         {
             if (vs == VSversion.VS2015)
