@@ -16,7 +16,8 @@ namespace Uploader
         {
             p = new Player("ivan");
             change(p);
-            Console.WriteLine(p.Name);
+            //Console.WriteLine(p.Name);
+            Console.WriteLine(DateTime.Now);
         }
 
 

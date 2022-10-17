@@ -20,7 +20,7 @@ namespace Uploader
             ftpurl = "ftp://update.instatsport.com/hokreg/";
             httpurl = "http://update.instatsport.com/hokreg/";
             buildCommand = getbuildcommabd(VSversion.VS2017);
-            isMyBuild = true;
+            isMyBuild = false;
 
         }
 
@@ -28,12 +28,12 @@ namespace Uploader
         {
             if (vs == VSversion.VS2015)
             {
-                return "\"C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/devenv.exe\" /rebuild Debug D:/PROG/ttd.hokreg/Hokreg.sln";
+                return "\"C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/devenv.exe\" /rebuild Release D:/PROG/ttd.hokreg/Hokreg.sln";
             }
 
             if (vs == VSversion.VS2017)
             {
-                return "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Debug D:/PROG/ttd.hokreg/Hokreg.sln";
+                return "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Release D:/PROG/ttd.hokreg/Hokreg.sln";
             }
             return "";
 

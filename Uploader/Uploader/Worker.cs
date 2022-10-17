@@ -444,6 +444,25 @@ namespace Uploader
             return Size;
         }
 
+        public void recursiveZip(int i)
+        {
+            getVersion();
+            Console.WriteLine("use you version: " + newVersion);
+            Console.WriteLine("Попытка: " + i);
+            bool zip_res = createZip();
+            if (zip_res)
+            {
+                Console.WriteLine("exist");
+
+            }
+            else
+            {
+                i++;
+                Console.WriteLine("NO");
+                recursiveZip(i);
+            }
+        }
+
         public void recursiveWork(int i)
         {
             Console.WriteLine("Попытка: " + i);
@@ -459,7 +478,8 @@ namespace Uploader
                     return;
                 }
                 updateService();
-                if (project.id == "8" || project.id == "9" || project.id == "13")
+                List<string> allowed = new List<string>() {"8", "9", "12", "13"};
+                if (allowed.Contains(project.id))
                 {
                     updateServicBserv();
                 }
@@ -771,19 +791,27 @@ namespace Uploader
 
             clearReleaseFolder();
 
-            Console.WriteLine("creating .... ");
-            DateTime thisDay = DateTime.Today;
-            string stDate = thisDay.ToString("yyyy-MM-dd");
-            zipname = project.zipfolder + "/"+project.name + "-" + stDate+".zip";
+            //Console.WriteLine("creating .... ");
+            //DateTime thisDay = DateTime.Today;
+            //string stDate = thisDay.ToString("yyyy-MM-dd");
+            //zipname = project.zipfolder + "/"+project.name + "-" + stDate+".zip";
 
-            System.IO.Compression.ZipFile.CreateFromDirectory(project.realesefolder, zipname);
-            StringCollection paths = new StringCollection();
-            paths.Add(zipname);
-            Clipboard.SetFileDropList(paths);
+            //System.IO.Compression.ZipFile.CreateFromDirectory(project.realesefolder, zipname);
+            //StringCollection paths = new StringCollection();
+            //paths.Add(zipname);
+            //Clipboard.SetFileDropList(paths);
 
-            Console.WriteLine("DONE");
+            //Console.WriteLine("DONE");
 
-            Console.ReadLine();
+            //Console.ReadLine();
+
+            build();
+            Thread.Sleep(60 * 1000);
+            int i = 0;
+            recursiveZip(0);
+
+            Console.WriteLine("Press any Key to Continue");
+            Console.ReadKey();
 
         }
 

@@ -15,7 +15,7 @@ namespace Uploader
             id = "12";
             exename = "AMF.exe";
             name = "amfootball";
-            rootpath = "C:/Data/Projects/cs/source/OldRegistrators/AMF";
+            rootpath = "D:/PROG/ttd.amf";
             assemlyrelpath = "Basket/Properties/AssemblyInfo.cs";
             assemlypath = rootpath + "/" + assemlyrelpath;
             realesefolder = rootpath + "/" + "release";
@@ -29,12 +29,12 @@ namespace Uploader
         {
             if (vs == VSversion.VS2015)
             {
-                return "\"C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/devenv.exe\" /rebuild Debug C:/Data/Projects/cs/source/OldRegistrators/AMF/AMF.sln";
+                return "\"C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/devenv.exe\" /rebuild Release D:/PROG/ttd.amf/AMF/AMF.sln";
             }
 
             if (vs == VSversion.VS2017)
             {
-                return "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Debug C:/Data/Projects/cs/source/OldRegistrators/AMF/AMF.sln";
+                return "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Release D:/PROG/ttd.amf/AMF/AMF.sln";
             }
             return "";
 
@@ -50,11 +50,11 @@ namespace Uploader
             int n2 = Convert.ToInt32(versnum[1]);
             int n3 = Convert.ToInt32(versnum[2]);
             int n4 = Convert.ToInt32(versnum[3]);
-            int new_number = n4 + n3 * 100 + n2 * 10000 + n1 * 1000000;
+            int new_number = n3 * 100 + n2 * 10000 + n1 * 1000000;
 
             if (add)
             {
-                new_number++;
+                new_number = new_number + 100;
             }
             return new_number.ToString();
         }
