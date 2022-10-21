@@ -51,19 +51,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractProject.cs" />
-    <Compile Include="AMF.cs" />
-    <Compile Include="Basket.cs" />
-    <Compile Include="BOnliner.cs" />
-    <Compile Include="Handball.cs" />
-    <Compile Include="HKOnliner.cs" />
-    <Compile Include="Hockey.cs" />
-    <Compile Include="HockeyRedbull.cs" />
-    <Compile Include="HOnliner.cs" />
+    <Compile Include="Projects\AMF.cs" />
+    <Compile Include="Projects\Basket.cs" />
+    <Compile Include="Projects\BOnliner.cs" />
+    <Compile Include="DATA.cs" />
+    <Compile Include="Projects\Handball.cs" />
+    <Compile Include="Projects\HKOnliner.cs" />
+    <Compile Include="Projects\Hockey.cs" />
+    <Compile Include="Projects\HockeyRedbull.cs" />
+    <Compile Include="Projects\HOnliner.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Utils.cs" />
-    <Compile Include="VOnliner.cs" />
+    <Compile Include="Utils\FileWorker.cs" />
+    <Compile Include="Projects\VOnliner.cs" />
     <Compile Include="VSversion.cs" />
     <Compile Include="Worker.cs" />
   </ItemGroup>

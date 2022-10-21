@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,8 +13,9 @@ namespace Uploader
         [STAThread]
         static void Main(string[] args)
         {
-            var test = new Test();
-            test.exec();
+            //var test = new Test();
+            //test.exec();
+            checkInfo();
             Console.WriteLine("Ваша лодка готова, капитан!");
             Worker wk = new Worker();
             if (wk.Action == 0)
@@ -28,6 +30,11 @@ namespace Uploader
 
         }
 
-       
+        //проверяем что есть
+        private static void checkInfo()
+        {
+            string host = Dns.GetHostName();
+            DATA.hostname = host;
+        }
     }
 }
