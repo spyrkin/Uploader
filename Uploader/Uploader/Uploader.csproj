@@ -61,11 +61,13 @@
     <Compile Include="Projects\HockeyRedbull.cs" />
     <Compile Include="Projects\HOnliner.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Projects\TestProject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test.cs" />
-    <Compile Include="Utils.cs" />
-    <Compile Include="Utils\FileWorker.cs" />
+    <Compile Include="Util\Utils.cs" />
+    <Compile Include="Util\FileWorker.cs" />
     <Compile Include="Projects\VOnliner.cs" />
+    <Compile Include="Util\ProjectBuilder.cs" />
     <Compile Include="VSversion.cs" />
     <Compile Include="Worker.cs" />
   </ItemGroup>
