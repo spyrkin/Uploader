@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using Util.live;
 
 namespace Uploader
 {
@@ -36,6 +37,9 @@ namespace Uploader
 
         private static void checkProjects()
         {
+            ProjectBuilder pbuilder = new ProjectBuilder();
+            pbuilder.create();
+
         }
 
         //проверяем что есть
