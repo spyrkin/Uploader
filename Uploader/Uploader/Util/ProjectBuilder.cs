@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Uploader;
 
 namespace Util.live
 {
@@ -30,6 +31,23 @@ namespace Util.live
                 try
                 {
                     checkFolder(pname);
+                    AbstractProject project = null;
+                    AbstractProject tproject = null;
+
+
+
+                    switch (pname)
+                    {
+                        case "hockey":
+                            project = new Hockey(true);
+                            tproject = new Hockey(true);
+                            break;
+
+                        default:
+                            break;
+                    }
+
+
                 }
                 catch (Exception ex)
                 {

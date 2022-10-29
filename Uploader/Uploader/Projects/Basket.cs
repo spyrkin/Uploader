@@ -22,24 +22,10 @@ namespace Uploader
             zipfolder = @"C: \Users\Programmist\Desktop\realeses\";
             ftpurl = "ftp://update.instatsport.com/basket/";
             httpurl = "http://update.instatsport.com/basket/";
-            buildCommand = getbuildcommabd(VSversion.VS2017);
+            buildCommand = "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Debug D:/PROG/ttd.basket/Basket.sln";
         }
 
 
-        public string getbuildcommabd(VSversion vs)
-        {
-            if (vs == VSversion.VS2015)
-            {
-                return "\"C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/devenv.exe\" /rebuild Debug D:/PROG/ttd.basket/Basket.sln";
-            }
-
-            if (vs == VSversion.VS2017)
-            {
-                return "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Debug D:/PROG/ttd.basket/Basket.sln";
-            }
-            return "";
-
-        }
         public override string getNewVerstion(string ver, bool add)
         {
 

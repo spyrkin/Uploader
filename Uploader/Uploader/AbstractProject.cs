@@ -25,20 +25,5 @@ namespace Uploader
         public abstract string getZipName();                    //получение имени для архива
 
         public bool isMyBuild = false;
-
-        public string getbuildcommabd(VSversion vs)
-        {
-            if (vs == VSversion.VS2015)
-            {
-                return "\"C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/devenv.exe\" /rebuild Debug C:/Users/Programmist/Desktop/BASKET/Basket.sln";
-            }
-
-            if (vs == VSversion.VS2017)
-            {
-                return "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Debug C:/Users/Programmist/Desktop/BASKET/Basket.sln";
-            }
-            return "";
-            
-        }
     }
 }

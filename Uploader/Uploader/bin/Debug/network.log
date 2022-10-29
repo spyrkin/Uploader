@@ -43062,3 +43062,253 @@ System.Net Verbose: 0 : [11300] Entering ConnectStream#5773521::EndRead()
 System.Net Verbose: 0 : [11300] Exiting ConnectStream#5773521::EndRead() 	-> Int32#0
 System.Net Verbose: 0 : [11300] Entering ConnectStream#5773521::Close()
 System.Net Verbose: 0 : [11300] Exiting ConnectStream#5773521::Close() 
+System.Net Verbose: 0 : [14496] Entering WebClient#45004109::UploadFile(ftp://update.instatsport.com/hokreg/hockey-2022-10-28_v_1030600.zip, STOR)
+System.Net Verbose: 0 : [14496] Entering WebRequest::Create(ftp://update.instatsport.com/hokreg/hockey-2022-10-28_v_1030600.zip)
+System.Net Information: 0 : [14496] FtpWebRequest#2383799::.ctor(ftp://update.instatsport.com/hokreg/hockey-2022-10-28_v_1030600.zip)
+System.Net Verbose: 0 : [14496] Exiting WebRequest::Create() 	-> FtpWebRequest#2383799
+System.Net Verbose: 0 : [14496] Entering FtpWebRequest#2383799::GetRequestStream()
+System.Net Information: 0 : [14496] FtpWebRequest#2383799::GetRequestStream(Метод=STOR.)
+System.Net Information: 0 : [14496] Текущий тип установки операционной системы: Client.
+System.Net Information: 0 : [14496] Поддерживаемый RAS: True
+System.Net Error: 0 : [14496] Не удается получить параметры прокси для Uri "ftp://update.instatsport.com/hokreg/hockey-2022-10-28_v_1030600.zip". Код ошибки: 12180.
+System.Net Verbose: 0 : [14496] Entering ServicePoint#58870012::ServicePoint(update.instatsport.com:21)
+System.Net Information: 0 : [14496] FtpControlStream#60068066 - Создано подключение с 192.168.0.102:25026 к 46.4.236.252:21.
+System.Net Information: 0 : [14496] Associating FtpWebRequest#2383799 with FtpControlStream#60068066
+System.Net Information: 0 : [14496] FtpControlStream#60068066 - Получен отклик [220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------
+220-You are user number 1 of 150 allowed.
+220-Local time is now 10:56. Server port: 21.
+220-This is a private system - No anonymous login
+220-IPv6 connections are also welcome on this server.
+220 You will be disconnected after 15 minutes of inactivity.]
+System.Net Information: 0 : [14496] FtpControlStream#60068066 - Отправка команды [USER update]
+System.Net Information: 0 : [14496] FtpControlStream#60068066 - Получен отклик [331 User update OK. Password required]
+System.Net Information: 0 : [14496] FtpControlStream#60068066 - Отправка команды [PASS ********]
+System.Net Information: 0 : [14496] FtpControlStream#60068066 - Получен отклик [230-This server supports FXP transfers
+230 OK. Current restricted directory is /]
+System.Net Information: 0 : [14496] FtpControlStream#60068066 - Отправка команды [OPTS utf8 on]
+System.Net Information: 0 : [14496] FtpControlStream#60068066 - Получен отклик [200 OK, UTF-8 enabled]
+System.Net Information: 0 : [14496] FtpControlStream#60068066 - Отправка команды [PWD]
+System.Net Information: 0 : [14496] FtpControlStream#60068066 - Получен отклик [257 "/" is your current location]
+System.Net Information: 0 : [14496] FtpControlStream#60068066 - Отправка команды [TYPE I]
+System.Net Information: 0 : [14496] FtpControlStream#60068066 - Получен отклик [200 TYPE is now 8-bit binary]
+System.Net Information: 0 : [14496] FtpControlStream#60068066 - Отправка команды [PASV]
+System.Net Information: 0 : [14496] FtpControlStream#60068066 - Получен отклик [227 Entering Passive Mode (46,4,236,252,140,156)]
+System.Net Information: 0 : [14496] FtpControlStream#60068066 - Отправка команды [STOR hokreg/hockey-2022-10-28_v_1030600.zip]
+System.Net Information: 0 : [14496] FtpControlStream#60068066 - Получен отклик [150 Accepted data connection]
+System.Net Verbose: 0 : [14496] Exiting FtpWebRequest#2383799::GetRequestStream() 
+System.Net Information: 0 : [14496] FtpControlStream#60068066 - Получен отклик [226-File successfully transferred
+226 49.020 seconds (measured here), 1.15 Mbytes per second]
+System.Net Information: 0 : [14496] FtpWebRequest#2383799::(Освобождение соединения FTP#60068066.)
+System.Net Verbose: 0 : [14496] Entering FtpWebRequest#2383799::GetResponse()
+System.Net Information: 0 : [14496] FtpWebRequest#2383799::GetResponse(Метод=STOR.)
+System.Net Verbose: 0 : [14496] Exiting FtpWebRequest#2383799::GetResponse() 
+System.Net Verbose: 0 : [14496] Exiting WebClient#45004109::UploadFile() 	-> Byte[]#3741682
+System.Net Verbose: 0 : [14496] Entering HttpWebRequest#43332040::HttpWebRequest(http://data.instatfootball.tv/views_custom/desktop_updates.php#1177799129)
+System.Net Verbose: 0 : [14496] Exiting HttpWebRequest#43332040::HttpWebRequest() 
+System.Net Verbose: 0 : [14496] Entering HttpWebRequest#43332040::HttpWebRequest(uri: 'http://data.instatfootball.tv/views_custom/desktop_updates.php', connectionGroupName: '33675143')
+System.Net Verbose: 0 : [14496] Exiting HttpWebRequest#43332040::HttpWebRequest() 
+System.Net Verbose: 0 : [7520] Entering HttpWebRequest#43332040::BeginGetRequestStream()
+System.Net Verbose: 0 : [7520] Entering ServicePoint#12549444::ServicePoint(data.instatfootball.tv:80)
+System.Net Information: 0 : [7520] Associating HttpWebRequest#43332040 with ServicePoint#12549444
+System.Net Information: 0 : [7520] Associating Connection#11478475 with HttpWebRequest#43332040
+System.Net Verbose: 0 : [7520] Exiting HttpWebRequest#43332040::BeginGetRequestStream() 	-> ContextAwareResult#43245362
+System.Net Verbose: 0 : [14496] Entering HttpWebRequest#39451090::HttpWebRequest(https://bserv.instatfootball.tv/Updates/UpVersion#187702142)
+System.Net Verbose: 0 : [14496] Exiting HttpWebRequest#39451090::HttpWebRequest() 
+System.Net Verbose: 0 : [14496] Entering HttpWebRequest#39451090::HttpWebRequest(uri: 'https://bserv.instatfootball.tv/Updates/UpVersion', connectionGroupName: '54024015')
+System.Net Verbose: 0 : [14496] Exiting HttpWebRequest#39451090::HttpWebRequest() 
+System.Net Verbose: 0 : [7520] Entering HttpWebRequest#39451090::BeginGetRequestStream()
+System.Net Verbose: 0 : [7520] Entering ServicePoint#17810826::ServicePoint(bserv.instatfootball.tv:443)
+System.Net Information: 0 : [7520] Associating HttpWebRequest#39451090 with ServicePoint#17810826
+System.Net Information: 0 : [7520] Associating Connection#50886371 with HttpWebRequest#39451090
+System.Net Information: 0 : [11984] Connection#11478475 - Создано подключение с 192.168.0.102:25039 к 148.251.209.85:80.
+System.Net Information: 0 : [11984] Associating HttpWebRequest#43332040 with ConnectStream#6044116
+System.Net Information: 0 : [11984] HttpWebRequest#43332040 - Request: POST /views_custom/desktop_updates.php HTTP/1.1
+
+System.Net Verbose: 0 : [7520] Exiting HttpWebRequest#39451090::BeginGetRequestStream() 	-> ContextAwareResult#1528652
+System.Net Information: 0 : [11984] ConnectStream#6044116 - Отправка заголовков
+{
+Content-Type: application/x-www-form-urlencoded
+Host: data.instatfootball.tv
+Content-Length: 118
+Expect: 100-continue
+Connection: Keep-Alive
+}.
+System.Net Information: 0 : [11984] Connection#50886371 - Создано подключение с 192.168.0.102:25040 к 46.4.170.172:443.
+System.Net Information: 0 : [11984] TlsStream#59817589::.ctor(host=bserv.instatfootball.tv, #certs=0, checkCertificateRevocationList=False, sslProtocols=Default)
+System.Net Information: 0 : [11984] Associating HttpWebRequest#39451090 with ConnectStream#48209832
+System.Net Information: 0 : [11984] HttpWebRequest#39451090 - Request: POST /Updates/UpVersion HTTP/1.1
+
+System.Net Information: 0 : [11984] ConnectStream#48209832 - Отправка заголовков
+{
+Content-Type: application/json
+Host: bserv.instatfootball.tv
+Content-Length: 148
+Expect: 100-continue
+Connection: Keep-Alive
+}.
+System.Net Information: 0 : [11984] SecureChannel#5773521::.ctor(hostname=bserv.instatfootball.tv, #clientCertificates=0, encryptionPolicy=RequireEncryption)
+System.Net Information: 0 : [11984] Список пакетов безопасности:
+System.Net Information: 0 : [11984]     Negotiate
+System.Net Information: 0 : [11984]     NegoExtender
+System.Net Information: 0 : [11984]     Kerberos
+System.Net Information: 0 : [11984]     NTLM
+System.Net Information: 0 : [11984]     TSSSP
+System.Net Information: 0 : [11984]     pku2u
+System.Net Information: 0 : [11984]     CloudAP
+System.Net Information: 0 : [11984]     WDigest
+System.Net Information: 0 : [11984]     Schannel
+System.Net Information: 0 : [11984]     Microsoft Unified Security Protocol Provider
+System.Net Information: 0 : [11984]     Default TLS SSP
+System.Net Information: 0 : [11984]     CREDSSP
+System.Net Information: 0 : [11984] SecureChannel#5773521 - Осталось 0 клиентских сертификатов для выбора.
+System.Net Information: 0 : [11984] SecureChannel#5773521::.AcquireClientCredentials, new SecureCredential() (flags=(ValidateManual, NoDefaultCred, SendAuxRecord), m_ProtocolFlags=(Ssl3Client, Tls10Client), m_EncryptionPolicy=RequireEncryption)
+System.Net Information: 0 : [11984] AcquireCredentialsHandle(package = Microsoft Unified Security Protocol Provider, intent  = Outbound, scc     = System.Net.SecureCredential)
+System.Net Information: 0 : [13552] Connection#11478475 - Получено строка состояния: Version=1.1, StatusCode=100, StatusDescription=Continue.
+System.Net Information: 0 : [13552] Connection#11478475 - Получены заголовки
+{
+
+}.
+System.Net Information: 0 : [11984] InitializeSecurityContext(credential = System.Net.SafeFreeCredential_SECURITY, context = (null), targetName = bserv.instatfootball.tv, inFlags = ReplayDetect, SequenceDetect, Confidentiality, AllocateMemory, InitManualCredValidation)
+System.Net Verbose: 0 : [13552] Entering HttpWebRequest#43332040::EndGetRequestStream()
+System.Net Information: 0 : [11984] InitializeSecurityContext(Длина In-Buffer=0, длина Out-Buffer=127, возвращенный код=ContinueNeeded).
+System.Net Verbose: 0 : [13552] Exiting HttpWebRequest#43332040::EndGetRequestStream() 	-> ConnectStream#6044116
+System.Net Verbose: 0 : [13552] Entering ConnectStream#6044116::BeginWrite()
+System.Net Verbose: 0 : [13552] Data from ConnectStream#6044116::BeginWrite
+System.Net Verbose: 0 : [13552] 00000000 : 69 64 3D 39 26 76 65 72-73 69 6F 6E 3D 31 30 33 : id=9&version=103
+System.Net Verbose: 0 : [13552] 00000010 : 30 36 30 30 26 75 70 64-61 74 65 3D 68 74 74 70 : 0600&update=http
+System.Net Verbose: 0 : [13552] 00000020 : 25 33 41 25 32 46 25 32-46 75 70 64 61 74 65 2E : %3A%2F%2Fupdate.
+System.Net Verbose: 0 : [13552] 00000030 : 69 6E 73 74 61 74 73 70-6F 72 74 2E 63 6F 6D 25 : instatsport.com%
+System.Net Verbose: 0 : [13552] 00000040 : 32 46 68 6F 6B 72 65 67-25 32 46 68 6F 63 6B 65 : 2Fhokreg%2Fhocke
+System.Net Verbose: 0 : [13552] 00000050 : 79 2D 32 30 32 32 2D 31-30 2D 32 38 5F 76 5F 31 : y-2022-10-28_v_1
+System.Net Verbose: 0 : [13552] 00000060 : 30 33 30 36 30 30 2E 7A-69 70 26 61 63 74 69 6F : 030600.zip&actio
+System.Net Verbose: 0 : [13552] 00000070 : 6E 3D 65 64 69 74                               : n=edit
+System.Net Verbose: 0 : [13552] Exiting ConnectStream#6044116::BeginWrite() 	-> NestedSingleAsyncResult#36610825
+System.Net Verbose: 0 : [13552] Entering ConnectStream#6044116::EndWrite()
+System.Net Verbose: 0 : [13552] Exiting ConnectStream#6044116::EndWrite() 
+System.Net Verbose: 0 : [13552] Entering ConnectStream#6044116::Close()
+System.Net Verbose: 0 : [13552] Exiting ConnectStream#6044116::Close() 
+System.Net Verbose: 0 : [13552] Entering HttpWebRequest#43332040::BeginGetResponse()
+System.Net Verbose: 0 : [13552] Exiting HttpWebRequest#43332040::BeginGetResponse() 	-> ContextAwareResult#61325552
+System.Net Information: 0 : [11984] InitializeSecurityContext(credential = System.Net.SafeFreeCredential_SECURITY, context = 1573b95de60:211acd858b0, targetName = bserv.instatfootball.tv, inFlags = ReplayDetect, SequenceDetect, Confidentiality, AllocateMemory, InitManualCredValidation)
+System.Net Information: 0 : [11984] InitializeSecurityContext(Счетчик In-Buffers=2, длина Out-Buffer=101, возвращенный код=ContinueNeeded).
+System.Net Information: 0 : [13516] InitializeSecurityContext(credential = System.Net.SafeFreeCredential_SECURITY, context = 1573b95de60:211acd858b0, targetName = bserv.instatfootball.tv, inFlags = ReplayDetect, SequenceDetect, Confidentiality, AllocateMemory, InitManualCredValidation)
+System.Net Information: 0 : [13516] InitializeSecurityContext(Счетчик In-Buffers=2, длина Out-Buffer=0, возвращенный код=ContinueNeeded).
+System.Net Information: 0 : [11984] Connection#11478475 - Получено строка состояния: Version=1.1, StatusCode=200, StatusDescription=OK.
+System.Net Information: 0 : [11984] Connection#11478475 - Получены заголовки
+{
+Connection: keep-alive
+Content-Length: 2
+Content-Type: application/json; charset=utf-8
+Date: Fri, 28 Oct 2022 07:56:58 GMT
+Server: nginx
+X-Powered-By: PHP/5.6.36
+}.
+System.Net Information: 0 : [13516] InitializeSecurityContext(credential = System.Net.SafeFreeCredential_SECURITY, context = 1573b95de60:211acd858b0, targetName = bserv.instatfootball.tv, inFlags = ReplayDetect, SequenceDetect, Confidentiality, AllocateMemory, InitManualCredValidation)
+System.Net Information: 0 : [11984] ConnectStream#54135081::ConnectStream(Помещено в буфер 2 байт.)
+System.Net Information: 0 : [11984] Associating HttpWebRequest#43332040 with ConnectStream#54135081
+System.Net Information: 0 : [11984] Associating HttpWebRequest#43332040 with HttpWebResponse#63094882
+System.Net Verbose: 0 : [11984] Entering HttpWebRequest#43332040::EndGetResponse()
+System.Net Information: 0 : [13516] InitializeSecurityContext(Счетчик In-Buffers=2, длина Out-Buffer=0, возвращенный код=OK).
+System.Net Verbose: 0 : [11984] Exiting HttpWebRequest#43332040::EndGetResponse() 	-> HttpWebResponse#63094882
+System.Net Verbose: 0 : [11984] Entering HttpWebResponse#63094882::GetResponseStream()
+System.Net Information: 0 : [11984] ContentLength=2
+System.Net Verbose: 0 : [11984] Exiting HttpWebResponse#63094882::GetResponseStream() 	-> ConnectStream#54135081
+System.Net Verbose: 0 : [11984] Entering ConnectStream#54135081::BeginRead()
+System.Net Verbose: 0 : [11984] Exiting ConnectStream#54135081::BeginRead() 	-> NestedSingleAsyncResult#49924125
+System.Net Verbose: 0 : [11984] Entering ConnectStream#54135081::EndRead()
+System.Net Verbose: 0 : [11984] Exiting ConnectStream#54135081::EndRead() 	-> Int32#2
+System.Net Verbose: 0 : [11984] Entering ConnectStream#54135081::BeginRead()
+System.Net Verbose: 0 : [11984] Exiting ConnectStream#54135081::BeginRead() 	-> NestedSingleAsyncResult#41773672
+System.Net Verbose: 0 : [11984] Entering ConnectStream#54135081::EndRead()
+System.Net Verbose: 0 : [11984] Exiting ConnectStream#54135081::EndRead() 	-> Int32#0
+System.Net Verbose: 0 : [11984] Entering ConnectStream#54135081::Close()
+System.Net Verbose: 0 : [11984] Exiting ConnectStream#54135081::Close() 
+System.Net Information: 0 : [13516] Удаленный сертификат: [Version]
+  V3
+
+[Subject]
+  CN=bserv.instatfootball.tv
+  Simple Name: bserv.instatfootball.tv
+  DNS Name: bserv.instatfootball.tv
+
+[Issuer]
+  CN=R3, O=Let's Encrypt, C=US
+  Simple Name: R3
+  DNS Name: R3
+
+[Serial Number]
+  034CC9816C9824153597490E8FD83EBA681C
+
+[Not Before]
+  25.10.2022 8:53:17
+
+[Not After]
+  23.01.2023 8:53:16
+
+[Thumbprint]
+  DCD4C7FAD903673069EAC6EBDB0D076251CFA7E8
+
+[Signature Algorithm]
+  sha256RSA(1.2.840.113549.1.1.11)
+
+[Public Key]
+  Algorithm: RSA
+  Length: 3072
+  Key Blob: 30 82 01 8a 02 82 01 81 00 d9 39 f9 4c dc f1 de d1 d4 5b 2f 19 7b 66 47 6b 38 6b d9 c0 79 28 74 e3 f3 f1 e7 6b 73 53 69 13 5c 6d 62 be 31 26 c1 50 56 0c 57 67 9b bf 99 67 ba 63 bd e8 b9 62 19 ca ff 4b b4 30 c6 ef 7e d2 56 ed 6f 5d b9 32 c8 df 6a b2 50 ea 16 f3 04 29 15 fe d9 19 f3 0c 25 93 d3 7a f6 d9 2e 91 20 19 75 04 d8 ff 79 4e 07 ea 8a d9 1d f8 71 14 f1 c7 65 b5 9e 49 89 bc 5a ae 96 a6 fe 20 37 0f 9d 54 9a 3e 35 77 df 15 8a 2d 6a eb 58 89 46 ef 6b c1 46 eb 11 4f 01 94 0b 6c e1 f1....
+System.Net Information: 0 : [13516] SecureChannel#5773521 - Пользователь признал удаленный сертификат действительным.
+System.Net Information: 0 : [13516] EndProcessAuthentication(протокол=Tls, шифр=Aes256 256 разрядов, хэш=Sha1 160 разрядов, обмен ключами=44550 255 разрядов).
+System.Net Information: 0 : [13448] Connection#50886371 - Получено строка состояния: Version=1.1, StatusCode=100, StatusDescription=Continue.
+System.Net Information: 0 : [13448] Connection#50886371 - Получены заголовки
+{
+
+}.
+System.Net Verbose: 0 : [13448] Entering HttpWebRequest#39451090::EndGetRequestStream()
+System.Net Verbose: 0 : [13448] Exiting HttpWebRequest#39451090::EndGetRequestStream() 	-> ConnectStream#48209832
+System.Net Verbose: 0 : [13448] Entering ConnectStream#48209832::BeginWrite()
+System.Net Verbose: 0 : [13448] Data from ConnectStream#48209832::BeginWrite
+System.Net Verbose: 0 : [13448] 00000000 : 7B 22 49 64 22 3A 22 39-22 2C 22 4C 69 6E 6B 22 : {"Id":"9","Link"
+System.Net Verbose: 0 : [13448] 00000010 : 3A 22 68 74 74 70 3A 5C-2F 5C 2F 75 70 64 61 74 : :"http:\/\/updat
+System.Net Verbose: 0 : [13448] 00000020 : 65 2E 69 6E 73 74 61 74-73 70 6F 72 74 2E 63 6F : e.instatsport.co
+System.Net Verbose: 0 : [13448] 00000030 : 6D 5C 2F 68 6F 6B 72 65-67 5C 2F 68 6F 63 6B 65 : m\/hokreg\/hocke
+System.Net Verbose: 0 : [13448] 00000040 : 79 2D 32 30 32 32 2D 31-30 2D 32 38 5F 76 5F 31 : y-2022-10-28_v_1
+System.Net Verbose: 0 : [13448] 00000050 : 30 33 30 36 30 30 2E 7A-69 70 22 2C 22 50 61 73 : 030600.zip","Pas
+System.Net Verbose: 0 : [13448] 00000060 : 73 77 6F 72 64 22 3A 22-74 72 34 35 32 66 66 34 : sword":"tr452ff4
+System.Net Verbose: 0 : [13448] 00000070 : 34 31 31 32 33 64 64 64-66 66 73 31 32 33 22 2C : 41123dddffs123",
+System.Net Verbose: 0 : [13448] 00000080 : 22 56 65 72 73 69 6F 6E-22 3A 22 31 2E 33 2E 36 : "Version":"1.3.6
+System.Net Verbose: 0 : [13448] 00000090 : 2E 30 22 7D                                     : .0"}
+System.Net Verbose: 0 : [13448] Exiting ConnectStream#48209832::BeginWrite() 	-> NestedSingleAsyncResult#37121646
+System.Net Verbose: 0 : [13448] Entering ConnectStream#48209832::EndWrite()
+System.Net Verbose: 0 : [13448] Exiting ConnectStream#48209832::EndWrite() 
+System.Net Verbose: 0 : [13448] Entering ConnectStream#48209832::Close()
+System.Net Verbose: 0 : [13448] Exiting ConnectStream#48209832::Close() 
+System.Net Verbose: 0 : [13448] Entering HttpWebRequest#39451090::BeginGetResponse()
+System.Net Verbose: 0 : [13448] Exiting HttpWebRequest#39451090::BeginGetResponse() 	-> ContextAwareResult#45592480
+System.Net Information: 0 : [11984] Connection#50886371 - Получено строка состояния: Version=1.1, StatusCode=200, StatusDescription=OK.
+System.Net Information: 0 : [11984] Connection#50886371 - Получены заголовки
+{
+Strict-Transport-Security: max-age=2592000
+Access-Control-Allow-Origin: *
+Content-Length: 15
+Content-Type: application/json; charset=utf-8
+Date: Fri, 28 Oct 2022 08:00:19 GMT
+Server: Microsoft-IIS/10.0
+X-Powered-By: ASP.NET
+}.
+System.Net Information: 0 : [11984] ConnectStream#34361009::ConnectStream(Помещено в буфер 15 байт.)
+System.Net Information: 0 : [11984] Associating HttpWebRequest#39451090 with ConnectStream#34361009
+System.Net Information: 0 : [11984] Associating HttpWebRequest#39451090 with HttpWebResponse#50492551
+System.Net Verbose: 0 : [11984] Entering HttpWebRequest#39451090::EndGetResponse()
+System.Net Verbose: 0 : [11984] Exiting HttpWebRequest#39451090::EndGetResponse() 	-> HttpWebResponse#50492551
+System.Net Verbose: 0 : [11984] Entering HttpWebResponse#50492551::GetResponseStream()
+System.Net Information: 0 : [11984] ContentLength=15
+System.Net Verbose: 0 : [11984] Exiting HttpWebResponse#50492551::GetResponseStream() 	-> ConnectStream#34361009
+System.Net Verbose: 0 : [11984] Entering ConnectStream#34361009::BeginRead()
+System.Net Verbose: 0 : [11984] Exiting ConnectStream#34361009::BeginRead() 	-> NestedSingleAsyncResult#53710617
+System.Net Verbose: 0 : [11984] Entering ConnectStream#34361009::EndRead()
+System.Net Verbose: 0 : [11984] Exiting ConnectStream#34361009::EndRead() 	-> Int32#15
+System.Net Verbose: 0 : [11984] Entering ConnectStream#34361009::BeginRead()
+System.Net Verbose: 0 : [11984] Exiting ConnectStream#34361009::BeginRead() 	-> NestedSingleAsyncResult#54181145
+System.Net Verbose: 0 : [11984] Entering ConnectStream#34361009::EndRead()
+System.Net Verbose: 0 : [11984] Exiting ConnectStream#34361009::EndRead() 	-> Int32#0
+System.Net Verbose: 0 : [11984] Entering ConnectStream#34361009::Close()
+System.Net Verbose: 0 : [11984] Exiting ConnectStream#34361009::Close() 

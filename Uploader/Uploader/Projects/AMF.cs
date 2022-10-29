@@ -22,23 +22,9 @@ namespace Uploader
             zipfolder = @"C: \Users\Programmist\Desktop\realeses\";
             ftpurl = "ftp://update.instatsport.com/amfootball/";
             httpurl = "http://update.instatsport.com/amfootball/";
-            buildCommand = getbuildcommabd(VSversion.VS2017);
+            buildCommand = "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Release D:/PROG/ttd.amf/AMF/AMF.sln";
         }
 
-        public string getbuildcommabd(VSversion vs)
-        {
-            if (vs == VSversion.VS2015)
-            {
-                return "\"C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/devenv.exe\" /rebuild Release D:/PROG/ttd.amf/AMF/AMF.sln";
-            }
-
-            if (vs == VSversion.VS2017)
-            {
-                return "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Release D:/PROG/ttd.amf/AMF/AMF.sln";
-            }
-            return "";
-
-        }
 
         public override string getNewVerstion(string ver, bool add)
         {
