@@ -41,11 +41,16 @@ namespace Util.live
                         case "hockey":
                             project = new Hockey(true);
                             tproject = new Hockey(true);
+
                             break;
 
                         default:
                             break;
                     }
+                    tproject.filsystem = rootPath + pname + ".txt";
+                    tproject.adjast();
+
+                    checkProjects(project, tproject);
 
 
                 }
@@ -55,6 +60,35 @@ namespace Util.live
                     Console.WriteLine(ex.Message);
 
                 }
+            }
+        }
+
+        private void checkProjects(AbstractProject project1, AbstractProject project2)
+        {
+
+            if (project1.zipfolder != project2.zipfolder)
+            {
+                Console.WriteLine("WRONG " + project1.name + "  " + "zipfolder");
+                Console.WriteLine(project1.zipfolder);
+                Console.WriteLine(project2.zipfolder);
+
+            }
+
+            if (project1.rootpath != project2.rootpath)
+            {
+                Console.WriteLine("WRONG " + project1.name + "  " + "rootpath");
+                Console.WriteLine(project1.rootpath);
+                Console.WriteLine(project2.rootpath);
+
+            }
+
+
+            if (project1.buildCommand != project2.buildCommand)
+            {
+                Console.WriteLine("WRONG " + project1.name + "  " + "buildCommand");
+                Console.WriteLine(project1.buildCommand);
+                Console.WriteLine(project2.buildCommand);
+
             }
         }
 

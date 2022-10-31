@@ -24,6 +24,41 @@ namespace Uploader
         public abstract string getNewVerstion(string ver, bool add);      //получение новой версии
         public abstract string getZipName();                    //получение имени для архива
 
+        public string filsystem;                                //испольем для получения пути от которого будем собирать
+
         public bool isMyBuild = false;
+
+
+        //достаем часть данных из файоа
+        public void adjast()
+        {
+            string content = Util.live.FileWorker.ReadFileContent(filsystem);
+            String[] lines = content.Split(new string[] { "\n" }, StringSplitOptions.None);
+            foreach (var l in lines)
+            {
+                String[] destr = l.Split(new string[] { "=" }, StringSplitOptions.None);
+                string tname = destr[0];
+                string tvalue = destr[1];
+
+                if (tname == "zipfolder")
+                {
+                    zipfolder = tvalue;
+                }
+
+                if (tname == "rootpath")
+                {
+                    rootpath = tvalue;
+                }
+
+                if (tname == "buildCommand")
+                {
+                    
+                    buildCommand = tvalue;
+                    buildCommand = buildCommand.Replace("\\", "");
+                }
+            }
+
+
+        }
     }
 }

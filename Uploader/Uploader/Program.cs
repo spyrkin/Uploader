@@ -20,8 +20,8 @@ namespace Uploader
             checkProjects();
 
             Console.WriteLine("Ваша лодка готова, капитан!");
-            //Console.ReadKey();
-            //return;
+            Console.ReadKey();
+            return;
             Worker wk = new Worker();
             if (wk.Action == 0)
             {
