@@ -101,13 +101,15 @@ namespace Uploader
             //Console.WriteLine("8 - баскетбол without build");
             //Console.WriteLine("9 - хоккей  without build");
             string name = Console.ReadLine();
+
+            ProjectBuilder build = new ProjectBuilder();
             switch (name)
             {
                 case "1":
-                    project = new Basket(true);
+                    project = build.GetProject("basket");
                     break;
                 case "2":
-                    project = new Hockey(true);
+                    project = build.GetProject("hockey");
                     break;
                 case "3":
                     project = new AMF(true);

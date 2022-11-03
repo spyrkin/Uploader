@@ -22,6 +22,8 @@ namespace Uploader
             buildCommand = "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Release D:/PROG/ttd.hokreg/Hokreg.sln";
             isMyBuild = false;
 
+
+
         }
 
 

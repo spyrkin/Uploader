@@ -11,7 +11,7 @@ namespace Util.live
     //класс для создания проекта
     public class ProjectBuilder
     {
-        public List<string> activeProject = new List<String> { "hockey" };
+        public List<string> activeProject = new List<String> { "hockey", "basket" };
         //путь до txt
         public string rootPath = "";
         public void getRootPath()
@@ -20,6 +20,30 @@ namespace Util.live
             string folder = p.Replace("\\Uploader.exe", "");
             string pfolder = folder + "\\txt\\" + Uploader.DATA.hostname + "\\";
             rootPath = pfolder;
+        }
+
+        public AbstractProject GetProject(string pname)
+        {
+            getRootPath();
+            AbstractProject tproject = null;
+            switch (pname)
+            {
+                case "hockey":
+                    tproject = new Hockey(true);
+
+                    break;
+
+                case "basket":
+                    tproject = new Basket(true);
+
+                    break;
+
+                default:
+                    break;
+            }
+            tproject.filsystem = rootPath + pname + ".txt";
+            tproject.adjast();
+            return tproject;
         }
 
 
@@ -41,6 +65,12 @@ namespace Util.live
                         case "hockey":
                             project = new Hockey(true);
                             tproject = new Hockey(true);
+
+                            break;
+
+                        case "basket":
+                            project = new Basket(true);
+                            tproject = new Basket(true);
 
                             break;
 

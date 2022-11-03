@@ -22,7 +22,7 @@ namespace Uploader
             zipfolder = @"C: \Users\Programmist\Desktop\realeses\";
             ftpurl = "ftp://update.instatsport.com/basket/";
             httpurl = "http://update.instatsport.com/basket/";
-            buildCommand = "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Debug D:/PROG/ttd.basket/Basket.sln";
+            buildCommand = "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Release D:/PROG/ttd.basket/Basket.sln";
         }
 
 

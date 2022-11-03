@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Uploader
 {
-    abstract class AbstractProject
+    public abstract class AbstractProject
     {
         public bool build = true;
         public string name;                                     //used for zip name
