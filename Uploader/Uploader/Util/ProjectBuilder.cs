@@ -13,18 +13,10 @@ namespace Util.live
     {
         public List<string> activeProject = new List<String> { "hockey", "basket", "handball", "amf" };
         //путь до txt
-        public string rootPath = "";
-        public void getRootPath()
-        {
-            String p = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            string folder = p.Replace("\\Uploader.exe", "");
-            string pfolder = folder + "\\txt\\" + Uploader.DATA.hostname + "\\";
-            rootPath = pfolder;
-        }
+
 
         public AbstractProject GetProject(string pname)
         {
-            getRootPath();
             AbstractProject tproject = null;
             switch (pname)
             {
@@ -54,7 +46,7 @@ namespace Util.live
                 default:
                     break;
             }
-            tproject.filsystem = rootPath + pname + ".txt";
+            tproject.filsystem = DATA.rootPath + pname + ".txt";
             tproject.adjast();
             return tproject;
         }
@@ -62,7 +54,6 @@ namespace Util.live
 
         public void create()
         {
-            getRootPath();
             foreach (var pname in activeProject)
             {
                 try
@@ -98,7 +89,7 @@ namespace Util.live
                         default:
                             break;
                     }
-                    tproject.filsystem = rootPath + pname + ".txt";
+                    tproject.filsystem = DATA.rootPath + pname + ".txt";
                     tproject.adjast();
 
                     checkProjects(project, tproject);
@@ -145,7 +136,7 @@ namespace Util.live
 
         private void checkFolder(String name)
         {
-            string filename = rootPath + name + ".txt";
+            string filename = DATA.rootPath + name + ".txt";
             if (!File.Exists(filename))
             {
                 throw new Exception(filename + "    not found");

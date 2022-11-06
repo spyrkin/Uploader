@@ -26,7 +26,6 @@ namespace Uploader
         public string currentVersion = "";
         public string newVersion = "";
         public string bserVersion = "";
-        public string YOUR_GIT_INSTALLED_DIRECTORY = "C:/Program Files/Git/";
         public string zipname;
 
         public int Action = 0; // 0 = создать новую версию, 1 - создать архив
@@ -210,7 +209,7 @@ namespace Uploader
             gitInfo.CreateNoWindow = true;
             gitInfo.RedirectStandardError = true;
             gitInfo.RedirectStandardOutput = true;
-            gitInfo.FileName = YOUR_GIT_INSTALLED_DIRECTORY + @"\bin\git.exe";
+            gitInfo.FileName = DATA.YOUR_GIT_INSTALLED_DIRECTORY + @"\bin\git.exe";
 
             Process gitProcessAdd = new Process();
             gitInfo.Arguments = "add " + project.assemlyrelpath; // such as "fetch orign"

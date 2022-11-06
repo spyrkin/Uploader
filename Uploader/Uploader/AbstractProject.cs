@@ -58,6 +58,8 @@ namespace Uploader
                 }
             }
 
+            zipfolder = DATA.zipfolder;
+
 
         }
     }

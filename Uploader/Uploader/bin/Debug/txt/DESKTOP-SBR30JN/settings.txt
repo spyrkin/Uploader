@@ -1,0 +1,2 @@
+YOUR_GIT_INSTALLED_DIRECTORY=C:/Program Files/Git/
+zipfolder=C: \Users\Programmist\Desktop\realeses\
