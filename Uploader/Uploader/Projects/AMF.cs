@@ -22,7 +22,7 @@ namespace Uploader
             zipfolder = @"C: \Users\Programmist\Desktop\realeses\";
             ftpurl = "ftp://update.instatsport.com/amfootball/";
             httpurl = "http://update.instatsport.com/amfootball/";
-            buildCommand = "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Release D:/PROG/ttd.amf/AMF/AMF.sln";
+            buildCommand = "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Release D:/PROG/ttd.amf/AMF.sln";
         }
 
 

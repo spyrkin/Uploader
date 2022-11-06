@@ -11,7 +11,7 @@ namespace Util.live
     //класс для создания проекта
     public class ProjectBuilder
     {
-        public List<string> activeProject = new List<String> { "hockey", "basket" };
+        public List<string> activeProject = new List<String> { "hockey", "basket", "handball", "amf" };
         //путь до txt
         public string rootPath = "";
         public void getRootPath()
@@ -37,6 +37,19 @@ namespace Util.live
                     tproject = new Basket(true);
 
                     break;
+
+                case "handball":
+                    tproject = new Handball(true);
+
+                    break;
+
+
+                case "amf":
+                    tproject = new AMF(true);
+
+                    break;
+
+
 
                 default:
                     break;
@@ -65,13 +78,21 @@ namespace Util.live
                         case "hockey":
                             project = new Hockey(true);
                             tproject = new Hockey(true);
-
                             break;
 
                         case "basket":
                             project = new Basket(true);
                             tproject = new Basket(true);
+                            break;
 
+                        case "handball":
+                            project = new Handball(true);
+                            tproject = new Handball(true);
+                            break;
+
+                        case "amf":
+                            project = new AMF(true);
+                            tproject = new AMF(true);
                             break;
 
                         default:

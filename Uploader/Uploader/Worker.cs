@@ -112,7 +112,7 @@ namespace Uploader
                     project = build.GetProject("hockey");
                     break;
                 case "3":
-                    project = new AMF(true);
+                    project = build.GetProject("amf");
                     break;
                 //case "4":
                 //    project = new Handball(true);
@@ -127,7 +127,7 @@ namespace Uploader
                     project = new HOnliner(true);
                     break;
                 case "8":
-                    project = new Handball(true);
+                    project = build.GetProject("handball");
                     break;
                 case "r":
                     project = new HockeyRedbull(true);
