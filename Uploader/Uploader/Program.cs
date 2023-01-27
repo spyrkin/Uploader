@@ -22,7 +22,7 @@ namespace Uploader
             //Console.ReadKey();
             //return;
             Console.WriteLine("Ваша лодка готова, капитан!");
-
+            showSalaryExpired();
             Worker wk = new Worker();
             if (wk.Action == 0)
             {
@@ -33,6 +33,19 @@ namespace Uploader
             {
                 wk.ZIPNEW();
             }
+
+        }
+
+        private static void showSalaryExpired()
+        {
+            DateTime now = DateTime.Now;
+            int Month = now.Month;
+            int Year = now.Year;
+            DateTime zp = new DateTime(Year, Month+1, 12);
+            var span = zp - now;
+            int expired = span.Days;
+            Console.WriteLine("До за осталось дней: " + expired);
+            Console.WriteLine("");
 
         }
 
