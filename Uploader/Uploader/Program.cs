@@ -38,19 +38,28 @@ namespace Uploader
 
         private static void showSalaryExpired()
         {
+            int salary_day = 12;
             DateTime now = DateTime.Now;
+            bool is_next_mount = now.Day > salary_day;
+
+
             int Month = now.Month;
             int Year = now.Year;
-            int next_mouth = Month + 1;
+            int next_mouth = Month;
             int next_year = Year;
-            if (Month == 12)
+            if (is_next_mount)
             {
-                 next_mouth = 1;
-                 next_year = Year + 1;
+                next_mouth = Month + 1;
+                next_year = Year;
+                if (Month == 12)
+                {
+                    next_mouth = 1;
+                    next_year = Year + 1;
+                }
             }
 
 
-            DateTime zp = new DateTime(next_year, next_mouth, 12);
+            DateTime zp = new DateTime(next_year, next_mouth, salary_day);
             var span = zp - now;
             int expired = span.Days;
             Console.WriteLine("До за осталось дней: " + expired);
