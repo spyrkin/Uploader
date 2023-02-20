@@ -38,7 +38,7 @@ namespace Uploader
 
         private static void showSalaryExpired()
         {
-            int salary_day = 12;
+            int salary_day = 20;
             DateTime now = DateTime.Now;
             bool is_next_mount = now.Day > salary_day;
 
@@ -61,8 +61,12 @@ namespace Uploader
 
             DateTime zp = new DateTime(next_year, next_mouth, salary_day);
             var span = zp - now;
-            int expired = span.Days;
-            Console.WriteLine("До за осталось дней: " + expired);
+            int expired = span.Days + 1;
+            if (span.Ticks < 0)
+            {
+                expired = 0;
+            }
+            Console.WriteLine("До зп осталось дней: " + expired);
             Console.WriteLine("");
 
         }
