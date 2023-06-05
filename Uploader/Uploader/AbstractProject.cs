@@ -77,8 +77,11 @@ namespace Uploader
                     buildCommand = tvalue;
                     buildCommand = buildCommand.Replace("\\", "");
                 }
-            }
 
+
+            }
+            assemlypath = rootpath + "/" + assemlyrelpath;
+            realesefolder = rootpath + "/" + "release";
             zipfolder = DATA.zipfolder;
 
 

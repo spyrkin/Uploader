@@ -108,30 +108,30 @@ namespace Util.live
         private void checkProjects(AbstractProject project1, AbstractProject project2)
         {
 
-            if (project1.zipfolder != project2.zipfolder)
-            {
-                Console.WriteLine("WRONG " + project1.name + "  " + "zipfolder");
-                Console.WriteLine(project1.zipfolder);
-                Console.WriteLine(project2.zipfolder);
+            //if (project1.zipfolder != project2.zipfolder)
+            //{
+            //    Console.WriteLine("WRONG " + project1.name + "  " + "zipfolder");
+            //    Console.WriteLine(project1.zipfolder);
+            //    Console.WriteLine(project2.zipfolder);
 
-            }
+            //}
 
-            if (project1.rootpath != project2.rootpath)
-            {
-                Console.WriteLine("WRONG " + project1.name + "  " + "rootpath");
-                Console.WriteLine(project1.rootpath);
-                Console.WriteLine(project2.rootpath);
+            //if (project1.rootpath != project2.rootpath)
+            //{
+            //    Console.WriteLine("WRONG " + project1.name + "  " + "rootpath");
+            //    Console.WriteLine(project1.rootpath);
+            //    Console.WriteLine(project2.rootpath);
 
-            }
+            //}
 
 
-            if (project1.buildCommand != project2.buildCommand)
-            {
-                Console.WriteLine("WRONG " + project1.name + "  " + "buildCommand");
-                Console.WriteLine(project1.buildCommand);
-                Console.WriteLine(project2.buildCommand);
+            //if (project1.buildCommand != project2.buildCommand)
+            //{
+            //    Console.WriteLine("WRONG " + project1.name + "  " + "buildCommand");
+            //    Console.WriteLine(project1.buildCommand);
+            //    Console.WriteLine(project2.buildCommand);
 
-            }
+            //}
         }
 
         private void checkFolder(String name)

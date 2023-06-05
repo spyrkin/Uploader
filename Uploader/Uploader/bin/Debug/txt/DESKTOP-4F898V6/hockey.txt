@@ -1,0 +1,2 @@
+rootpath=C:/PROG/WORK/ttd.hokreg
+buildCommand="C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/devenv.exe" /rebuild Release C:/PROG/WORK/ttd.hokreg/Hokreg.sln
