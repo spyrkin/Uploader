@@ -38,7 +38,7 @@ namespace Uploader
 
         private static void showSalaryExpired()
         {
-            int salary_day = 12;
+            int salary_day = 13;
             DateTime now = DateTime.Now;
             bool is_next_mount = now.Day > salary_day;
 
