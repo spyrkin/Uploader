@@ -647,6 +647,8 @@ namespace Uploader
             }
             catch (Exception e)
             {
+                Console.WriteLine("error in bserv");
+
                 Console.WriteLine(e.Message);
                 Console.ReadKey();
             }
@@ -708,6 +710,8 @@ namespace Uploader
             }
             catch (Exception e)
             {
+                Console.WriteLine("error in data");
+
                 Console.WriteLine(e.Message);
                 Console.ReadKey();
             }
