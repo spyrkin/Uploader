@@ -11,6 +11,7 @@ namespace Uploader
     {
         public bool build = true;
         public string name;                                     //used for zip name
+        public string Aname;
         public string id;                                       //id на football-parser
         public string rootpath;                                 //путь до папки с проектом
         public string assemlypath;                              //путь до AssemblyInfo.cs
@@ -32,12 +33,10 @@ namespace Uploader
         {
 
             string newversion = "";
-            string cver = ver.Substring(1, ver.Length - 2); //обрезанная версия
-            string[] versnum = cver.Split(new String[] { "." }, StringSplitOptions.None);
+            string[] versnum = ver.Split(new String[] { "." }, StringSplitOptions.None);
             int n1 = Convert.ToInt32(versnum[0]);
             int n2 = Convert.ToInt32(versnum[1]);
             int n3 = Convert.ToInt32(versnum[2]);
-            int n4 = Convert.ToInt32(versnum[3]);
             int new_number = n3 * 100 + n2 * 10000 + n1 * 1000000;
 
             if (add)
@@ -81,7 +80,7 @@ namespace Uploader
 
             }
             assemlypath = rootpath + "/" + assemlyrelpath;
-            realesefolder = rootpath + "/" + "release";
+            realesefolder = rootpath +"/" + Aname+ "/bin/Release/net461";
             zipfolder = DATA.zipfolder;
 
 

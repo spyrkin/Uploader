@@ -15,14 +15,16 @@ namespace Uploader
             id = "8";
             exename = "basket.exe";
             name = "basket";
-            rootpath = "D:/PROG/ttd.basket";
+            rootpath = "D:/PROG/ttd.basket2/TTD.Basket";
             assemlyrelpath = "Basket/Properties/AssemblyInfo.cs";
             assemlypath = rootpath + "/" + assemlyrelpath;
             realesefolder = rootpath + "/" + "release";
             zipfolder = @"C: \Users\Programmist\Desktop\realeses\";
             ftpurl = "ftp://update.instatsport.com/basket/";
             httpurl = "http://update.instatsport.com/basket/";
-            buildCommand = "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Release D:/PROG/ttd.basket/Basket.sln";
+            buildCommand = "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Release D:/PROG/ttd.basket2/TTD.Basket/Basket.sln";
+       
+        
         }
 
 

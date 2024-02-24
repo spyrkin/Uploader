@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Linq;
 
 
 namespace Uploader
@@ -12,14 +13,15 @@ namespace Uploader
             id = "9";
             exename = "hokreg.exe";
             name = "hockey";
-            rootpath = "D:/PROG/ttd.hokreg";
-            assemlyrelpath = "Hokreg/Properties/AssemblyInfo.cs";
+            Aname = "Hokreg";
+            rootpath = "D:/PROG/ttd.hokreg3";
+            assemlyrelpath = "Hokreg/Hokreg.csproj";
             assemlypath = rootpath + "/" + assemlyrelpath;
-            realesefolder = rootpath + "/" + "release";
+            realesefolder = rootpath + "/bin/Release/net461";
             zipfolder = @"C: \Users\Programmist\Desktop\realeses\";
             ftpurl = "ftp://update.instatsport.com/hokreg/";
             httpurl = "http://update.instatsport.com/hokreg/";
-            buildCommand = "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Release D:/PROG/ttd.hokreg/Hokreg.sln";
+            buildCommand = "\"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/devenv.exe\" /rebuild Release D:/PROG/ttd.hocker2/TTD.Hockey/Hokreg.sln";
             isMyBuild = false;
 
 

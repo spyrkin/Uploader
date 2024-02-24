@@ -154,19 +154,19 @@ namespace Uploader
             string assemlyContent = "";
             assemlyContent = utils.getFileContent(project.assemlypath);
             int st_index = assemlyContent.IndexOf("AssemblyVersion");
-            int l1 = "AssemblyVersion(".Length;
+            int l1 = "<AssemblyVersion".Length;
             int st1 = st_index + l1;                                                           //индекс откуда начинается строка версия
             int st2 = 0;                                                                       //индекс где кончается строка версия
 
             for (int i = st1; i < assemlyContent.Length - 1; i++)
             {
-                if (assemlyContent[i] == ')')
+                if (assemlyContent[i] == '<')
                 {
                     st2 = i;
                     break;
                 }
             }
-            currentVersion = assemlyContent.Substring(st1, st2 - st1);                         //получаем старую версию
+            currentVersion = assemlyContent.Substring(st1, st2 - st1);                          //получаем старую версию
 
             Console.WriteLine("Current version: " + currentVersion);
             if (project.build)
@@ -175,7 +175,7 @@ namespace Uploader
 
                 bserVersion = modifyVersion(); //получаем представление версии в формала 1.2.3.4                                  
                 Console.WriteLine("NewVersion version: " + bserVersion);
-                assemlyContent = assemlyContent.Substring(0, st1) + "\"" + bserVersion + "\"" + //заменяем
+                assemlyContent = assemlyContent.Substring(0, st1)  + bserVersion  + //заменяем
                                  assemlyContent.Substring(st2, assemlyContent.Length - st2);
 
                 utils.saveFileContent(project.assemlypath, assemlyContent); //сохраняем файл
@@ -299,7 +299,6 @@ namespace Uploader
 
         public void CREATENEW()
         {
-            infowork();
             clearFolder();
             if (!project.isMyBuild)
             {
@@ -307,7 +306,7 @@ namespace Uploader
                 build();
 
                 Thread.Sleep(60 * 1000);
-                commit();
+                removeDirtyFiles();
             }
             else
             {
@@ -333,13 +332,13 @@ namespace Uploader
             string assemlyContent = "";
             assemlyContent = utils.getFileContent(project.assemlypath);
             int st_index = assemlyContent.IndexOf("AssemblyVersion");
-            int l1 = "AssemblyVersion(".Length;
+            int l1 = "<AssemblyVersion".Length;
             int st1 = st_index + l1;                                                           //индекс откуда начинается строка версия
             int st2 = 0;                                                                       //индекс где кончается строка версия
 
             for (int i = st1; i < assemlyContent.Length - 1; i++)
             {
-                if (assemlyContent[i] == ')')
+                if (assemlyContent[i] == '<')
                 {
                     st2 = i;
                     break;
@@ -479,6 +478,8 @@ namespace Uploader
                     recursiveWork(i);
                     return;
                 }
+
+
                 updateService();
                 List<string> allowed = new List<string>() {"8", "9", "12", "13"};
                 if (allowed.Contains(project.id))
@@ -552,6 +553,12 @@ namespace Uploader
 
         private void clearFolder()
         {
+            //clear all release folder 
+            if (Directory.Exists(project.realesefolder))
+            {
+                Directory.Delete(project.realesefolder, true);
+            }
+            return;
 
             string FolderName = project.realesefolder + "/db/";
             DirectoryInfo dir = new DirectoryInfo(FolderName);
@@ -594,10 +601,8 @@ namespace Uploader
             string debugFolder = project.realesefolder + "/debug/";
 
 
-            if (Directory.Exists(cashfolder))
-            {
-                Directory.Delete(cashfolder, true);
-            }
+
+
 
             if (Directory.Exists(debugFolder))
             {
@@ -769,31 +774,32 @@ namespace Uploader
 
         public void ZIPNEW()
         {
+
             Console.WriteLine("ZIP NEW ");
 
             clearFolder();
-            string path1 = project.rootpath + "/release1.7z";
-            string path2 = project.rootpath + "/release1.zip";
-            string path3 = project.rootpath + "/release1.rar";
-            string path4 = project.rootpath + "/release1.zip";
+            //string path1 = project.rootpath + "/release1.7z";
+            //string path2 = project.rootpath + "/release1.zip";
+            //string path3 = project.rootpath + "/release1.rar";
+            //string path4 = project.rootpath + "/release1.zip";
 
-            if (File.Exists(path1))
-            {
-                File.Delete(path1);
-                Console.WriteLine("remove archive: " + path1);
-            }
+            //if (File.Exists(path1))
+            //{
+            //    File.Delete(path1);
+            //    Console.WriteLine("remove archive: " + path1);
+            //}
 
-            if (File.Exists(path2))
-            {
-                File.Delete(path2);
-                Console.WriteLine("remove archive: " + path2);
-            }
+            //if (File.Exists(path2))
+            //{
+            //    File.Delete(path2);
+            //    Console.WriteLine("remove archive: " + path2);
+            //}
 
-            if (File.Exists(path3))
-            {
-                File.Delete(path3);
-                Console.WriteLine("remove archive: " + path3);
-            }
+            //if (File.Exists(path3))
+            //{
+            //    File.Delete(path3);
+            //    Console.WriteLine("remove archive: " + path3);
+            //}
 
             clearReleaseFolder();
 
@@ -812,12 +818,31 @@ namespace Uploader
             //Console.ReadLine();
              
             build();
+
             Thread.Sleep(60 * 1000);
+
+            removeDirtyFiles();
+
             int i = 0;
             recursiveZip(0);
 
             Console.WriteLine("Press any Key to Continue");
             Console.ReadKey();
+
+        }
+
+        public void removeDirtyFiles()
+        {
+            List<string> fname = new List<string>(){"ffmpeg.exe", "ffmpeg_x86.exe", "ffprobe.exe" };
+            foreach (string p in fname)
+            {
+                string path = project.realesefolder + "/" + p;
+                if (File.Exists(path))
+                {
+                    File.Delete(path);
+                    Console.WriteLine("remove ffmpef files: " + path);
+                }
+            }
 
         }
 

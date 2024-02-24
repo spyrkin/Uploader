@@ -1,2 +1,2 @@
-rootpath=C:/PROG/WORK/ttd.basket
-buildCommand="C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/devenv.exe" /rebuild Release C:/PROG/WORK/ttd.basket/Basket.sln
+rootpath=C:/PROG/WORK/ttd.basket2/TTD.Basket
+buildCommand="C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/devenv.exe" /rebuild Release C:/PROG/WORK/ttd.basket2/TTD.Basket/Basket.sln
